@@ -3,6 +3,7 @@ import requests
 from colorama import init
 init(autoreset=True)
 
+#first ,you must got your zerotier_ID and API_Tokens ,the curl is https://my.zerotier.com/account
 zerotier_ID=""
 API_Tokens=""
 
