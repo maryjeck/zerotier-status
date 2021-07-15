@@ -52,15 +52,20 @@ if r.status_code != 200 :
   print("zerotierID或API_Tokens设置，请重新设置！！")
 data=r.json()
 
-title =         "{:<10.10}".format('nodeId')+"\t"
+title = '\033[1;32m'
+title = title + "No  "
+title = title + "{:<10.10}".format('nodeId')+"\t"
 title = title + '{name:<{len}}'.format(name="name",len=20-len("name".encode('GBK'))+len("name")) + '\t'
 title = title + "{:<10.10}".format("online")  +"\t"
 title = title + "{:<13.13}".format('clientVersion')  +"\t"
 title = title + "{:<20.20}".format('physicalAddress') + "\t"
 title = title + "ipAssignments"
+title = title + '\033[0m'
 
-print('\033[1;32m'+title+'\033[0m')
+print(title)
 
 for x in range(len(data)):
   outstr = resultFormat(data[x]) 
-  print(outstr)
+  print("{:0>2d}".format(x+1)+"  "+outstr)
+
+
