@@ -3,8 +3,8 @@ import requests
 from colorama import init
 init(autoreset=True)
 
-zerotier_ID="8bd5124fd655d68b"
-API_Tokens="DJBJHh978HP6qNPXkULO6ATAPlKI6w4g"
+zerotier_ID=""
+API_Tokens=""
 
 def resultFormat(data):
   nodeId = "{:<10.10}".format(data['nodeId'])+"\t"
